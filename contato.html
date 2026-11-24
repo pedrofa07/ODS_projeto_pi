@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - BrightEnergy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="navegacao">
+            <div class="container navegacao__container">
+                <a href="index.html" class="navegacao__logo">
+                    <i class="fas fa-sun navegacao__icone-logo"></i>
+                    <span class="navegacao__texto-logo">BrightEnergy</span>
+                </a>
+                <button class="navegacao__menu-mobile" id="botao-menu-mobile" aria-label="Abrir menu">
+                    <span class="navegacao__hamburguer"></span>
+                </button>
+                <ul class="navegacao__menu" id="menu-principal">
+                    <li><a href="index.html" class="navegacao__link">Início</a></li>
+                    <li><a href="calculadora.html" class="navegacao__link">Calculadora</a></li>
+                    <li><a href="empresas.html" class="navegacao__link">Empresas</a></li>
+                    <li><a href="contato.html" class="navegacao__link">Contato</a></li>
+                     <li>
+                        <a href="admin.html" class="navegacao__link">Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contato-principal">
+        <div class="container">
+            <div class="secao__cabecalho secao__cabecalho--pagina">
+                <h1 class="secao__titulo secao__titulo--pagina">Entre em Contato</h1>
+                <p class="secao__descricao secao__descricao--pagina">
+                    Tire suas dúvidas sobre energia renovável em Santa Cruz do Sul
+                </p>
+            </div>
+
+            <div class="contato__conteudo">
+                <div class="contato__formulario">
+                    <form id="formulario-contato" class="contato__form">
+                        <div class="contato__campo">
+                            <label for="nome-contato" class="contato__rotulo">Nome completo</label>
+                            <input type="text" id="nome-contato" class="contato__entrada" placeholder="Seu nome" required>
+                        </div>
+                        <div class="contato__campo">
+                            <label for="email-contato" class="contato__rotulo">E-mail</label>
+                            <input type="email" id="email-contato" class="contato__entrada" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="contato__campo">
+                            <label for="assunto-contato" class="contato__rotulo">Assunto</label>
+                            <select id="assunto-contato" class="contato__entrada contato__selecao" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="duvida">Dúvida sobre energia solar</option>
+                                <option value="orcamento">Solicitar orçamento</option>
+                                <option value="sugestao">Sugestão</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="contato__campo">
+                            <label for="mensagem-contato" class="contato__rotulo">Mensagem</label>
+                            <textarea id="mensagem-contato" class="contato__entrada contato__textarea"
+                                      placeholder="Descreva sua dúvida ou solicitação..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="botao botao--primario botao--bloco">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+                    </form>
+
+                    <div class="contato__sucesso" id="contato-sucesso" style="display: none;">
+                        <i class="fas fa-check-circle contato__icone-sucesso"></i>
+                        <h3>Mensagem enviada com sucesso!</h3>
+                        <p>Retornaremos em até 48 horas úteis.</p>
+                    </div>
+                </div>
+
+                <div class="contato__informacoes">
+                    <div class="contato__cartao-info">
+                        <h3 class="contato__titulo-info">Informações de Contato</h3>
+                        <div class="contato__info-item">
+                            <div class="contato__icone-info"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="contato__rotulo-info">E-mail</span>
+                                <span class="contato__valor-info">contato@brightenergy.com.br</span>
+                            </div>
+                        </div>
+                        <div class="contato__info-item">
+                            <div class="contato__icone-info"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <span class="contato__rotulo-info">Telefone</span>
+                                <span class="contato__valor-info">(51) 98660-1274</span>
+                            </div>
+                        </div>
+                        <div class="contato__info-item">
+                            <div class="contato__icone-info"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <span class="contato__rotulo-info">Horário de Atendimento</span>
+                                <span class="contato__valor-info">Seg a Sex: 9h às 18h</span>
+                            </div>
+                        </div>
+                        <div class="contato__info-item">
+                            <div class="contato__icone-info"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="contato__rotulo-info">Localização</span>
+                                <span class="contato__valor-info">Santa Cruz do Sul, Rio Grande do Sul - Brasil</span>
+                            </div>
+                        </div>
+                    </div>
+
+                  
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape__container">
+            <div class="rodape__esquerda">
+                <div class="rodape__sobre">
+                    <h3 class="rodape__titulo-sobre">Sobre Nós</h3>
+                    <p class="rodape__texto-sobre">A BrightEnergy é uma plataforma dedicada a democratizar o acesso à informação sobre energias renováveis em Santa Cruz do Sul.</p>
+                </div>
+            </div>
+            <div class="rodape__centro">
+                <h3 class="rodape__titulo-links">Links Rápidos</h3>
+                <ul class="rodape__links">
+                    <li><a href="index.html" class="rodape__link">Início</a></li>
+                    <li><a href="calculadora.html" class="rodape__link">Calculadora</a></li>
+                    <li><a href="empresas.html" class="rodape__link">Empresas</a></li>
+                    <li><a href="contato.html" class="rodape__link">Contato</a></li>
+                </ul>
+            </div>
+            <div class="rodape__direita">
+                <h3 class="rodape__titulo-contato">Contato</h3>
+                <div class="rodape__info-contato">
+                    <div class="rodape__contato-item">
+                        <i class="fas fa-envelope rodape__icone-contato"></i>
+                        <div>
+                            <span class="rodape__rotulo-contato">E-mail</span>
+                            <a href="mailto:contato@brightenergy.com.br" class="rodape__link-contato">contato@brightenergy.com.br</a>
+                        </div>
+                    </div>
+                    <div class="rodape__contato-item">
+                        <i class="fas fa-phone rodape__icone-contato"></i>
+                        <div>
+                            <span class="rodape__rotulo-contato">Telefone</span>
+    <a href="tel:+5551986601274" class="rodape__link-contato">(51) 98660-1274</a>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rodape__inferior">
+            <div class="container rodape__inferior-container">
+                <p class="rodape__copyright">&copy; 2026 BrightEnergy. Projeto ODS 7 - Santa Cruz do Sul</p>
+                <p class="rodape__desenvolvedor">Pedro Fagundes Alves</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/menu-mobile.js"></script>
+    <script src="js/contato.js"></script>
+</body>
+</html>

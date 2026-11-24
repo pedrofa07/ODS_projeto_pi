@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - BrightEnergy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- ============================================
+         CABEÇALHO
+         ============================================ -->
+    <header class="cabecalho-admin">
+        <div class="container">
+            <div class="admin-header">
+                <a href="index.html" class="navegacao__logo" style="color:white;">
+                    <i class="fas fa-sun navegacao__icone-logo"></i>
+                    <span class="navegacao__texto-logo">BrightEnergy</span>
+                </a>
+                <span style="color:rgba(255,255,255,0.7);">Painel Administrativo</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-principal">
+        <div class="container">
+
+            <!-- ============================================
+                 TELA DE LOGIN
+                 ============================================ -->
+            <div id="admin-login" class="admin-login">
+                <div class="admin-login__cartao">
+                    <h2><i class="fas fa-lock"></i> Acesso Restrito</h2>
+                    <p>Digite login e senha para acessar o painel</p>
+
+                    <form id="form-login">
+                        <input type="text" id="login-admin" placeholder="Login" required autocomplete="username">
+                        <input type="password" id="senha-admin" placeholder="Senha" required autocomplete="current-password">
+                        <button type="submit" class="botao botao--primario botao--bloco">Entrar</button>
+                    </form>
+
+                    <p style="color:red; display:none;" id="erro-login">Login ou senha incorretos.</p>
+                </div>
+            </div>
+
+            <!-- ============================================
+                 PAINEL (oculto até login)
+                 ============================================ -->
+            <div id="admin-painel" style="display: none;">
+
+                <!-- Abas -->
+                <div class="admin-tabs">
+                    <button class="admin-tab ativo" data-tab="mensagens">
+                        <i class="fas fa-envelope"></i> Mensagens
+                    </button>
+                    <button class="admin-tab" data-tab="empresas">
+                        <i class="fas fa-building"></i> Empresas
+                    </button>
+                    <button class="admin-tab" id="btn-logout">
+                        <i class="fas fa-sign-out-alt"></i> Sair
+                    </button>
+                </div>
+
+                <!-- Aba: Mensagens -->
+                <div id="tab-mensagens" class="admin-conteudo">
+                    <h2>Mensagens dos Usuários</h2>
+                    <div id="lista-mensagens"></div>
+                </div>
+
+                <!-- Aba: Empresas -->
+                <div id="tab-empresas" class="admin-conteudo" style="display:none;">
+                    <h2>Gerenciar Empresas</h2>
+                    <div id="lista-empresas-admin"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

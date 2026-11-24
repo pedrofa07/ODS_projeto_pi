@@ -1,0 +1,293 @@
+/* ============================================
+   CABEÇALHO ADMIN
+   ============================================ */
+.cabecalho-admin {
+    background: var(--cor-fundo-escuro);
+    padding: 1rem 0;
+    color: white;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-principal {
+    padding: 2rem 0 5rem;
+}
+
+/* ============================================
+   TELA DE LOGIN
+   ============================================ */
+.admin-login {
+    max-width: 400px;
+    margin: 4rem auto;
+}
+
+.admin-login__cartao {
+    background: var(--cor-fundo-claro);
+    border-radius: var(--borda-radius-xl);
+    padding: 2rem;
+    border: 1px solid var(--cor-borda);
+    box-shadow: var(--sombra-media);
+    text-align: center;
+}
+
+.admin-login__cartao h2 {
+    margin-bottom: 1rem;
+    color: var(--cor-texto-escuro);
+}
+
+.admin-login__cartao p {
+    color: var(--cor-texto-claro);
+    margin-bottom: 1.5rem;
+}
+
+.admin-login__cartao form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.admin-login__cartao input {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--cor-borda);
+    border-radius: var(--borda-radius-padrao);
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    transition: var(--transicao-padrao);
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.admin-login__cartao input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+/* ============================================
+   ABAS
+   ============================================ */
+.admin-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--cor-borda);
+    padding-bottom: 0.5rem;
+}
+
+.admin-tab {
+    background: none;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cor-texto-claro);
+    cursor: pointer;
+    border-radius: var(--borda-radius-padrao);
+    transition: var(--transicao-padrao);
+    font-family: var(--fonte-principal);
+}
+
+.admin-tab.ativo {
+    background: var(--cor-primaria);
+    color: white;
+}
+
+.admin-tab:hover:not(.ativo) {
+    background: var(--cor-fundo-cinza);
+}
+
+/* ============================================
+   CONTEÚDO
+   ============================================ */
+.admin-conteudo {
+    background: var(--cor-fundo-claro);
+    border-radius: var(--borda-radius-xl);
+    padding: 2rem;
+    border: 1px solid var(--cor-borda);
+    box-shadow: var(--sombra-media);
+}
+
+.admin-conteudo h2 {
+    color: var(--cor-texto-escuro);
+    margin-bottom: 1rem;
+}
+
+/* ============================================
+   ITENS: MENSAGEM / EMPRESA
+   ============================================ */
+.mensagem-item,
+.empresa-item {
+    padding: 1rem;
+    border-bottom: 1px solid var(--cor-borda);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.mensagem-item:last-child,
+.empresa-item:last-child {
+    border-bottom: none;
+}
+
+.mensagem-dados,
+.empresa-dados {
+    flex: 1;
+    min-width: 200px;
+}
+
+.mensagem-dados strong,
+.empresa-dados strong {
+    display: block;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 0.25rem;
+}
+
+.mensagem-dados span,
+.empresa-dados span {
+    color: var(--cor-texto-claro);
+    font-size: 0.9rem;
+    display: block;
+}
+
+.mensagem-dados p {
+    color: var(--cor-texto);
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.mensagem-acoes,
+.empresa-acoes {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+/* ============================================
+   BOTÕES DE AÇÃO
+   ============================================ */
+.btn-email,
+.btn-aprovar,
+.btn-editar,
+.btn-excluir {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: var(--borda-radius-pequeno);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transicao-padrao);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: var(--fonte-principal);
+}
+
+.btn-email {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.btn-email:hover {
+    background: #bfdbfe;
+}
+
+.btn-aprovar {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.btn-aprovar:hover {
+    background: #bbf7d0;
+}
+
+.btn-editar {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.btn-editar:hover {
+    background: #fde68a;
+}
+
+.btn-excluir {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.btn-excluir:hover {
+    background: #fca5a5;
+}
+
+/* ============================================
+   STATUS
+   ============================================ */
+.status-pendente {
+    display: inline-block;
+    background: #fef3c7;
+    color: #92400e;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    width: fit-content;
+}
+
+.status-aprovado {
+    display: inline-block;
+    background: #dcfce7;
+    color: #166534;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    width: fit-content;
+}
+
+/* ============================================
+   RESPONSIVO
+   ============================================ */
+@media (max-width: 640px) {
+    .admin-tabs {
+        flex-wrap: wrap;
+    }
+    .admin-tab {
+        flex: 1;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    .mensagem-item,
+    .empresa-item {
+        flex-direction: column;
+    }
+    .mensagem-acoes,
+    .empresa-acoes {
+        width: 100%;
+    }
+}
+/* BRIGHTENERGY UI 2026 — ADMIN RESPONSIVO */
+.cabecalho-admin{background:linear-gradient(135deg,#052e24,#064e3b);box-shadow:0 5px 25px rgba(0,0,0,.12)}
+.admin-login__cartao,.admin-conteudo{border-radius:20px;box-shadow:var(--sombra);border-color:var(--cor-borda)}
+.admin-login__cartao input{min-height:48px;border-width:1px;border-radius:12px}
+.admin-tabs{gap:8px;flex-wrap:wrap;border-bottom:0}
+.admin-tab{padding:11px 16px;background:#fff;border:1px solid var(--cor-borda)}
+@media(max-width:640px){
+    .admin-header{align-items:flex-start;gap:10px;flex-direction:column}
+    .admin-header .navegacao__logo{font-size:1.2rem}
+    .admin-principal{padding:1rem 0 3rem}
+    .admin-login{margin:2rem auto}
+    .admin-login__cartao,.admin-conteudo{padding:20px}
+    .admin-tab{flex:1;min-width:120px}
+    .mensagem-item,.empresa-item{padding:14px 0}
+}

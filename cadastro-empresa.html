@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre sua Empresa - BrightEnergy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="navegacao">
+            <div class="container navegacao__container">
+                <a href="index.html" class="navegacao__logo">
+                    <i class="fas fa-sun navegacao__icone-logo"></i>
+                    <span class="navegacao__texto-logo">BrightEnergy</span>
+                </a>
+                <button class="navegacao__menu-mobile" id="botao-menu-mobile" aria-label="Abrir menu">
+                    <span class="navegacao__hamburguer"></span>
+                </button>
+                <ul class="navegacao__menu" id="menu-principal">
+                    <li><a href="index.html" class="navegacao__link">Início</a></li>
+                    <li><a href="calculadora.html" class="navegacao__link">Calculadora</a></li>
+                    <li><a href="empresas.html" class="navegacao__link">Empresas</a></li>
+                    <li><a href="contato.html" class="navegacao__link">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cadastro-principal">
+        <div class="container">
+            <div class="secao__cabecalho secao__cabecalho--pagina">
+                <h1 class="secao__titulo secao__titulo--pagina">Cadastre sua Empresa</h1>
+                <p class="secao__descricao secao__descricao--pagina">
+                    Preencha os dados abaixo para aparecer no nosso diretório de empresas de energia renovável em Santa Cruz do Sul.
+                    Após o envio, aguarde a aprovação do administrador.
+                </p>
+            </div>
+
+            <div class="cadastro__formulario-container">
+                <form id="formulario-cadastro-empresa" class="cadastro__form">
+                    <div class="cadastro__campo">
+                        <label for="nome-empresa" class="cadastro__rotulo">Nome da Empresa *</label>
+                        <input type="text" id="nome-empresa" class="cadastro__entrada" placeholder="Ex: Solar Vale Instalações" required>
+                    </div>
+
+                    <div class="cadastro__campo">
+                        <label for="endereco-empresa" class="cadastro__rotulo">Endereço completo *</label>
+                        <input type="text" id="endereco-empresa" class="cadastro__entrada" placeholder="Rua, número, complemento" required>
+                    </div>
+
+                    <div class="cadastro__campo">
+                        <label for="bairro-empresa" class="cadastro__rotulo">Bairro *</label>
+                        <select id="bairro-empresa" class="cadastro__entrada cadastro__selecao" required>
+                            <option value="">Selecione o bairro</option>
+                            <option value="Aliança">Aliança</option>
+                            <option value="Ana Nery">Ana Nery</option>
+                            <option value="Arroio Grande">Arroio Grande</option>
+                            <option value="Avenida">Avenida</option>
+                            <option value="Belvedere">Belvedere</option>
+                            <option value="Bom Jesus">Bom Jesus</option>
+                            <option value="Bonfim">Bonfim</option>
+                            <option value="Castelo Branco">Castelo Branco</option>
+                            <option value="Centro">Centro</option>
+                            <option value="Country">Country</option>
+                            <option value="Do Parque">Do Parque</option>
+                            <option value="Dona Carlota">Dona Carlota</option>
+                            <option value="Esmeralda">Esmeralda</option>
+                            <option value="Faxinal Menino Deus">Faxinal Menino Deus</option>
+                            <option value="Germânia">Germânia</option>
+                            <option value="Goiás">Goiás</option>
+                            <option value="Higienópolis">Higienópolis</option>
+                            <option value="Independência">Independência</option>
+                            <option value="Jardim Europa">Jardim Europa</option>
+                            <option value="João Alves">João Alves</option>
+                            <option value="Linha Santa Cruz">Linha Santa Cruz</option>
+                            <option value="Margarida">Margarida</option>
+                            <option value="Monte Verde">Monte Verde</option>
+                            <option value="Pedreira">Pedreira</option>
+                            <option value="Progresso">Progresso</option>
+                            <option value="Rauber">Rauber</option>
+                            <option value="Renascença">Renascença</option>
+                            <option value="Santa Vitória">Santa Vitória</option>
+                            <option value="Santo Antônio">Santo Antônio</option>
+                            <option value="Santo Inácio">Santo Inácio</option>
+                            <option value="Santuário">Santuário</option>
+                            <option value="São João">São João</option>
+                            <option value="Schulz">Schulz</option>
+                            <option value="Senai">Senai</option>
+                            <option value="Universitário">Universitário</option>
+                            <option value="Várzea">Várzea</option>
+                        </select>
+                    </div>
+
+                    <div class="cadastro__campo">
+                        <label for="telefone-empresa" class="cadastro__rotulo">Telefone / WhatsApp *</label>
+                        <input type="tel" id="telefone-empresa" class="cadastro__entrada" placeholder="(51) 99999-9999" required>
+                    </div>
+
+                    <div class="cadastro__campo">
+                        <label for="email-empresa" class="cadastro__rotulo">E-mail *</label>
+                        <input type="email" id="email-empresa" class="cadastro__entrada" placeholder="contato@empresa.com" required>
+                    </div>
+
+                    <div class="cadastro__campo">
+                        <label for="instagram-empresa" class="cadastro__rotulo">Instagram (opcional)</label>
+                        <input type="text" id="instagram-empresa" class="cadastro__entrada" placeholder="@empresa">
+                    </div>
+
+                    <div class="cadastro__campo">
+                        <label for="cnpj-empresa" class="cadastro__rotulo">CNPJ (não será exibido publicamente) *</label>
+                        <input type="text" id="cnpj-empresa" class="cadastro__entrada" placeholder="00.000.000/0000-00" required>
+                    </div>
+
+                    <button type="submit" class="botao botao--primario botao--bloco">
+                        <i class="fas fa-paper-plane"></i> Enviar Cadastro
+                    </button>
+                </form>
+
+                <div class="cadastro__sucesso" id="cadastro-sucesso" style="display: none;">
+                    <i class="fas fa-check-circle cadastro__icone-sucesso"></i>
+                    <h3>Cadastro enviado com sucesso!</h3>
+                    <p>Aguarde a aprovação do administrador. Você receberá um e-mail quando for aprovado.</p>
+                    <a href="empresas.html" class="botao botao--primario botao--pequeno" style="margin-top:1rem;">Voltar para Empresas</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape__container">
+            <div class="rodape__esquerda">
+                <div class="rodape__sobre">
+                    <h3 class="rodape__titulo-sobre">Sobre Nós</h3>
+                    <p class="rodape__texto-sobre">A BrightEnergy é uma plataforma dedicada a democratizar o acesso à informação sobre energias renováveis em Santa Cruz do Sul.</p>
+                </div>
+            </div>
+            <div class="rodape__centro">
+                <h3 class="rodape__titulo-links">Links Rápidos</h3>
+                <ul class="rodape__links">
+                    <li><a href="index.html" class="rodape__link">Início</a></li>
+                    <li><a href="calculadora.html" class="rodape__link">Calculadora</a></li>
+                    <li><a href="empresas.html" class="rodape__link">Empresas</a></li>
+                    <li><a href="contato.html" class="rodape__link">Contato</a></li>
+                </ul>
+            </div>
+            <div class="rodape__direita">
+                <h3 class="rodape__titulo-contato">Contato</h3>
+                <div class="rodape__info-contato">
+                    <div class="rodape__contato-item">
+                        <i class="fas fa-envelope rodape__icone-contato"></i>
+                        <div>
+                            <span class="rodape__rotulo-contato">E-mail</span>
+                            <a href="mailto:contato@brightenergy.com.br" class="rodape__link-contato">contato@brightenergy.com.br</a>
+                        </div>
+                    </div>
+                    <div class="rodape__contato-item">
+                        <i class="fas fa-phone rodape__icone-contato"></i>
+                        <div>
+                            <span class="rodape__rotulo-contato">Telefone</span>
+    <a href="tel:+5551986601274" class="rodape__link-contato">(51) 98660-1274</a>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rodape__inferior">
+            <div class="container rodape__inferior-container">
+                <p class="rodape__copyright">&copy; 2026 BrightEnergy. Projeto ODS 7 - Santa Cruz do Sul</p>
+                <p class="rodape__desenvolvedor">Pedro Fagundes Alves</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/menu-mobile.js"></script>
+    <script src="js/cadastro-empresa.js"></script>
+</body>
+
+</html>

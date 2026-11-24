@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightEnergy - Energia Limpa em Santa Cruz do Sul</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="navegacao">
+            <div class="container navegacao__container">
+                <a href="index.html" class="navegacao__logo">
+                    <i class="fas fa-sun navegacao__icone-logo"></i>
+                    <span class="navegacao__texto-logo">BrightEnergy</span>
+                </a>
+
+                <button class="navegacao__menu-mobile" id="botao-menu-mobile" aria-label="Abrir menu">
+                    <span class="navegacao__hamburguer"></span>
+                </button>
+
+                <ul class="navegacao__menu" id="menu-principal">
+                    <li class="navegacao__item">
+                        <a href="index.html" class="navegacao__link navegacao__link--ativo">Início</a>
+                    </li>
+                    <li class="navegacao__item">
+                        <a href="calculadora.html" class="navegacao__link">Calculadora</a>
+                    </li>
+                    <li class="navegacao__item">
+                        <a href="empresas.html" class="navegacao__link">Empresas</a>
+                    </li>
+                    <li class="navegacao__item">
+                        <a href="contato.html" class="navegacao__link">Contato</a>
+                    </li>
+                    <li class="navegacao__item">
+                        <a href="admin.html" class="navegacao__link">Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__conteudo">
+                    <span class="hero__etiqueta">ODS 7 - Energia Limpa e Acessível</span>
+                    <h1 class="hero__titulo">Energia limpa em Santa Cruz do Sul:<br><span class="hero__destaque">economia e sustentabilidade</span></h1>
+                    <p class="hero__descricao">
+                        Santa Cruz do Sul é um dos maiores polos de energia solar do Brasil.
+                        Aqui você encontra informação clara, simulações de custo/retorno e contato com empresas locais — tudo pensado para facilitar a sua decisão.
+                    </p>
+                    <div class="hero__botoes">
+                        <a href="calculadora.html" class="botao botao--primario">
+                            <i class="fas fa-calculator"></i> Simular meu sistema
+                        </a>
+                        <a href="contato.html" class="botao botao--secundario">
+                            <i class="fas fa-question-circle"></i> Fazer pergunta
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__imagem">
+                    <div class="hero__circulo-principal">
+                        <i class="fas fa-solar-panel hero__icone-principal"></i>
+                    </div>
+                    <div class="hero__circulo-secundario">
+                        <i class="fas fa-leaf hero__icone-secundario"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="estatisticas">
+            <div class="container">
+                <div class="estatisticas__grade">
+                    <div class="estatisticas__item">
+                        <i class="fas fa-solar-panel estatisticas__icone"></i>
+                        <span class="estatisticas__numero" data-alvo="768">0</span>
+                        <span class="estatisticas__porcentagem"></span>
+                        <p class="estatisticas__rotulo">Unidades geradoras em Santa Cruz (2019)</p>
+                    </div>
+                    <div class="estatisticas__item">
+                        <i class="fas fa-chart-line estatisticas__icone"></i>
+                        <span class="estatisticas__numero" data-alvo="10800">0</span>
+                        <span class="estatisticas__porcentagem">kW</span>
+                        <p class="estatisticas__rotulo">Potência instalada no município</p>
+                    </div>
+                    <div class="estatisticas__item">
+                        <i class="fas fa-bolt estatisticas__icone"></i>
+                        <span class="estatisticas__numero" data-alvo="84">0</span>
+                        <span class="estatisticas__porcentagem">%</span>
+                        <p class="estatisticas__rotulo">Matriz renovável brasileira</p>
+                    </div>
+                    <div class="estatisticas__item">
+                        <i class="fas fa-users estatisticas__icone"></i>
+                        <span class="estatisticas__numero" data-alvo="68">0</span>
+                        <span class="estatisticas__porcentagem">%</span>
+                        <p class="estatisticas__rotulo">Desconhecem incentivos fiscais</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="beneficios" id="beneficios">
+            <div class="container">
+                <div class="secao__cabecalho">
+                    <span class="secao__etiqueta">Por que escolher</span>
+                    <h2 class="secao__titulo">Benefícios da Energia Renovável</h2>
+                    <p class="secao__descricao">Descubra como a energia limpa pode transformar sua vida e o planeta</p>
+                </div>
+
+                <div class="beneficios__grade">
+                    <div class="beneficios__cartao" data-animacao="aparecer-esquerda">
+                        <div class="beneficios__icone-container beneficios__icone-container--verde">
+                            <i class="fas fa-piggy-bank beneficios__icone"></i>
+                        </div>
+                        <h3 class="beneficios__titulo">Redução de gastos com energia</h3>
+                        <p class="beneficios__texto">
+                            Economize até 95% na sua conta de luz com sistemas fotovoltaicos.
+                            O investimento se paga em média em 3 a 5 anos, gerando economia por mais de 25 anos.
+                        </p>
+                        <ul class="beneficios__lista">
+                            <li class="beneficios__item-lista"><i class="fas fa-check-circle"></i> Retorno garantido do investimento</li>
+                            <li class="beneficios__item-lista"><i class="fas fa-check-circle"></i> Proteção contra aumentos tarifários</li>
+                        </ul>
+                    </div>
+
+                    <div class="beneficios__cartao" data-animacao="aparecer-cima">
+                        <div class="beneficios__icone-container beneficios__icone-container--azul">
+                            <i class="fas fa-leaf beneficios__icone"></i>
+                        </div>
+                        <h3 class="beneficios__titulo">Menor impacto ambiental</h3>
+                        <p class="beneficios__texto">
+                            Cada sistema solar instalado reduz significativamente a emissão de CO2,
+                            contribuindo diretamente para o combate às mudanças climáticas.
+                        </p>
+                        <ul class="beneficios__lista">
+                            <li class="beneficios__item-lista"><i class="fas fa-check-circle"></i> Energia 100% limpa e renovável</li>
+                            <li class="beneficios__item-lista"><i class="fas fa-check-circle"></i> Redução da pegada de carbono</li>
+                        </ul>
+                    </div>
+
+                    <div class="beneficios__cartao" data-animacao="aparecer-direita">
+                        <div class="beneficios__icone-container beneficios__icone-container--laranja">
+                            <i class="fas fa-home beneficios__icone"></i>
+                        </div>
+                        <h3 class="beneficios__titulo">Valorização do imóvel</h3>
+                        <p class="beneficios__texto">
+                            Imóveis com sistemas de energia solar instalados podem valorizar
+                            até 20% no mercado imobiliário brasileiro.
+                        </p>
+                        <ul class="beneficios__lista">
+                            <li class="beneficios__item-lista"><i class="fas fa-check-circle"></i> Diferencial competitivo</li>
+                            <li class="beneficios__item-lista"><i class="fas fa-check-circle"></i> Maior atratividade para compradores</li>
+                        </ul>
+                    </div>
+
+                    <div class="beneficios__cartao" data-animacao="aparecer-esquerda">
+                        <div class="beneficios__icone-container beneficios__icone-container--roxo">
+                            <i class="fas fa-city beneficios__icone"></i>
+                        </div>
+                        <h3 class="beneficios__titulo">Polo de inovação regional</h3>
+                        <p class="beneficios__texto">
+                            Santa Cruz do Sul investiu mais de R$ 54 milhões em sistemas fotovoltaicos em apenas cinco anos,
+                            gerando uma nova cadeia produtiva e fortalecendo a economia local.
+                        </p>
+                        <ul class="beneficios__lista">
+                            <li class="beneficios__item-lista"><i class="fas fa-check-circle"></i> 768 unidades geradoras</li>
+                            <li class="beneficios__item-lista"><i class="fas fa-check-circle"></i> 10.800 kW de potência instalada</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="como-funciona" id="como-funciona">
+            <div class="container">
+                <div class="secao__cabecalho">
+                    <span class="secao__etiqueta">Simulação</span>
+                    <h2 class="secao__titulo">Como funciona a simulação</h2>
+                    <p class="secao__descricao">Em poucos passos, descubra o potencial de economia com energia solar</p>
+                </div>
+
+                <div class="como-funciona__grade">
+                    <div class="como-funciona__passo">
+                        <div class="como-funciona__numero">01</div>
+                        <div class="como-funciona__conteudo">
+                            <h3 class="como-funciona__titulo-passo">Insira sua conta</h3>
+                            <p class="como-funciona__descricao-passo">Digite o valor médio da sua conta de energia elétrica dos últimos meses</p>
+                        </div>
+                    </div>
+                    <div class="como-funciona__passo">
+                        <div class="como-funciona__numero">02</div>
+                        <div class="como-funciona__conteudo">
+                            <h3 class="como-funciona__titulo-passo">Custo do sistema</h3>
+                            <p class="como-funciona__descricao-passo">Informe o valor estimado para instalação do sistema fotovoltaico</p>
+                        </div>
+                    </div>
+                    <div class="como-funciona__passo">
+                        <div class="como-funciona__numero">03</div>
+                        <div class="como-funciona__conteudo">
+                            <h3 class="como-funciona__titulo-passo">Veja o retorno</h3>
+                            <p class="como-funciona__descricao-passo">Descubra em quantos anos seu investimento será recuperado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="como-funciona__acao">
+                    <a href="calculadora.html" class="botao botao--primario botao--grande">
+                        <i class="fas fa-calculator"></i> Ir para Simulação
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="informacoes-educativas">
+            <div class="container">
+                <div class="secao__cabecalho">
+                    <span class="secao__etiqueta">Educação</span>
+                    <h2 class="secao__titulo">Entenda a Energia Renovável</h2>
+                    <p class="secao__descricao">Informações essenciais para tomar a melhor decisão</p>
+                </div>
+
+                <div class="informacoes-educativas__grade">
+                    <article class="informacoes-educativas__artigo">
+                        <div class="informacoes-educativas__imagem-container">
+                            <i class="fas fa-solar-panel informacoes-educativas__imagem-icone"></i>
+                        </div>
+                        <div class="informacoes-educativas__conteudo">
+                            <h3 class="informacoes-educativas__titulo-artigo">Como funciona a energia solar?</h3>
+                            <p class="informacoes-educativas__texto-artigo">
+                                Os painéis solares convertem a luz do sol em energia elétrica através do efeito
+                                fotovoltaico. Esta energia pode ser utilizada imediatamente ou injetada na rede
+                                elétrica, gerando créditos para uso posterior.
+                            </p>
+                            <p class="informacoes-educativas__texto-artigo">
+                                Em Santa Cruz do Sul, a média de irradiação solar é excelente, garantindo alta produtividade dos sistemas.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="informacoes-educativas__artigo">
+                        <div class="informacoes-educativas__imagem-container informacoes-educativas__imagem-container--verde">
+                            <i class="fas fa-chart-line informacoes-educativas__imagem-icone"></i>
+                        </div>
+                        <div class="informacoes-educativas__conteudo">
+                            <h3 class="informacoes-educativas__titulo-artigo">Retorno do Investimento</h3>
+                            <p class="informacoes-educativas__texto-artigo">
+                                O payback (tempo de retorno) de um sistema solar residencial em Santa Cruz do Sul
+                                varia entre 3 e 5 anos, devido à alta tarifa de energia e aos incentivos locais.
+                            </p>
+                            <p class="informacoes-educativas__texto-artigo">
+                                Com vida útil superior a 25 anos, os sistemas solares proporcionam
+                                décadas de economia após o período de payback.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="informacoes-educativas__artigo">
+                        <div class="informacoes-educativas__imagem-container informacoes-educativas__imagem-container--azul">
+                            <i class="fas fa-file-invoice-dollar informacoes-educativas__imagem-icone"></i>
+                        </div>
+                        <div class="informacoes-educativas__conteudo">
+                            <h3 class="informacoes-educativas__titulo-artigo">Incentivos Disponíveis</h3>
+                            <p class="informacoes-educativas__texto-artigo">
+                                O governo brasileiro oferece isenção de ICMS sobre a energia gerada e linhas de financiamento
+                                com juros subsidiados. Em Santa Cruz, o Sicredi Vale do Rio Pardo já financiou mais de 300 sistemas.
+                            </p>
+                            <p class="informacoes-educativas__texto-artigo">
+                                Além disso, a ANEEL estabeleceu o sistema de compensação de energia,
+                                permitindo que o excedente gerado seja convertido em créditos.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <div class="secao__cabecalho">
+                    <span class="secao__etiqueta">FAQ</span>
+                    <h2 class="secao__titulo">Perguntas Frequentes</h2>
+                    <p class="secao__descricao">Tire suas principais dúvidas sobre energia renovável</p>
+                </div>
+
+                <div class="faq__lista">
+                    <div class="faq__item">
+                        <button class="faq__pergunta" aria-expanded="false">
+                            <span>Quanto custa instalar energia solar em Santa Cruz do Sul?</span>
+                            <i class="fas fa-chevron-down faq__icone"></i>
+                        </button>
+                        <div class="faq__resposta">
+                            <p>O custo médio para um sistema residencial de 3 kWp (que gera cerca de 360 kWh/mês) fica entre R$ 12.000 e R$ 18.000, já incluindo instalação. Empresas locais como a Solled e a Solar Vale oferecem orçamentos gratuitos.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <button class="faq__pergunta" aria-expanded="false">
+                            <span>Em quanto tempo o investimento se paga aqui?</span>
+                            <i class="fas fa-chevron-down faq__icone"></i>
+                        </button>
+                        <div class="faq__resposta">
+                            <p>Na região, o payback médio é de 3 a 5 anos, devido às tarifas elevadas e à boa irradiação solar. A vida útil dos painéis é superior a 25 anos, garantindo economia por décadas.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <button class="faq__pergunta" aria-expanded="false">
+                            <span>Preciso de autorização da AESul?</span>
+                            <i class="fas fa-chevron-down faq__icone"></i>
+                        </button>
+                        <div class="faq__resposta">
+                            <p>Sim, é necessário solicitar a homologação junto à AESul (concessionária local). A empresa instaladora costuma cuidar de todo o processo, mas prazos podem chegar a 6 meses, conforme relatado por moradores.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta__conteudo">
+                    <h2 class="cta__titulo">Pronto para começar sua jornada sustentável em Santa Cruz?</h2>
+                    <p class="cta__descricao">
+                        Calcule sua economia, encontre empresas locais qualificadas e faça parte
+                        da revolução da energia limpa na sua cidade.
+                    </p>
+                    <div class="cta__botoes">
+                        <a href="calculadora.html" class="botao botao--primario">
+                            <i class="fas fa-calculator"></i> Simular Agora
+                        </a>
+                        <a href="empresas.html" class="botao botao--secundario">
+                            <i class="fas fa-building"></i> Ver Empresas Locais
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape__container">
+            <div class="rodape__esquerda">
+                <div class="rodape__sobre">
+                    <h3 class="rodape__titulo-sobre">Sobre Nós</h3>
+                    <p class="rodape__texto-sobre">
+                        A BrightEnergy é uma plataforma dedicada a democratizar o acesso à informação
+                        sobre energias renováveis em Santa Cruz do Sul (RS). Nosso objetivo é conectar pessoas a
+                        soluções sustentáveis, promovendo a transição energética justa e inclusiva.
+                    </p>
+                    <p class="rodape__texto-sobre">
+                        Alinhados com o ODS 7 da ONU, trabalhamos para tornar a energia limpa
+                        acessível a todos os moradores da região.
+                    </p>
+                    <p class="rodape__texto-sobre" style="font-size:0.85rem; color:rgba(255,255,255,0.5);">
+                        Referência: Brose et al. (2020) - Inovação social na geração distribuída de energia: o caso de Santa Cruz do Sul/RS.
+                    </p>
+                </div>
+            </div>
+
+            <div class="rodape__centro">
+                <h3 class="rodape__titulo-links">Links Rápidos</h3>
+                <ul class="rodape__links">
+                    <li class="rodape__item-link"><a href="index.html" class="rodape__link">Início</a></li>
+                    <li class="rodape__item-link"><a href="calculadora.html" class="rodape__link">Calculadora</a></li>
+                    <li class="rodape__item-link"><a href="empresas.html" class="rodape__link">Empresas</a></li>
+                    <li class="rodape__item-link"><a href="contato.html" class="rodape__link">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape__direita">
+                <h3 class="rodape__titulo-contato">Contato</h3>
+                <div class="rodape__info-contato">
+                    <div class="rodape__contato-item">
+                        <i class="fas fa-envelope rodape__icone-contato"></i>
+                        <div>
+                            <span class="rodape__rotulo-contato">E-mail</span>
+                            <a href="mailto:contato@brightenergy.com.br" class="rodape__link-contato">contato@brightenergy.com.br</a>
+                        </div>
+                    </div>
+                    <div class="rodape__contato-item">
+                        <i class="fas fa-phone rodape__icone-contato"></i>
+                        <div>
+                            <span class="rodape__rotulo-contato">Telefone</span>
+                            <a href="tel:+5551986601274" class="rodape__link-contato">(51) 98660-1274</a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="rodape__inferior">
+            <div class="container rodape__inferior-container">
+                <p class="rodape__copyright">&copy; 2026 BrightEnergy. Todos os direitos reservados. | Projeto ODS 7 - Energia Limpa e Acessível</p>
+                <p class="rodape__desenvolvedor">Desenvolvido por Pedro Fagundes Alves</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/menu-mobile.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

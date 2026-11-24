@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresas - Santa Cruz do Sul - BrightEnergy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/empresas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="navegacao">
+            <div class="container navegacao__container">
+                <a href="index.html" class="navegacao__logo">
+                    <i class="fas fa-sun navegacao__icone-logo"></i>
+                    <span class="navegacao__texto-logo">BrightEnergy</span>
+                </a>
+                <button class="navegacao__menu-mobile" id="botao-menu-mobile" aria-label="Abrir menu">
+                    <span class="navegacao__hamburguer"></span>
+                </button>
+                <ul class="navegacao__menu" id="menu-principal">
+                    <li><a href="index.html" class="navegacao__link">Início</a></li>
+                    <li><a href="calculadora.html" class="navegacao__link">Calculadora</a></li>
+                    <li><a href="empresas.html" class="navegacao__link">Empresas</a></li>
+                    <li><a href="contato.html" class="navegacao__link">Contato</a></li>
+                     <li>
+                        <a href="admin.html" class="navegacao__link">Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="empresas-principal">
+        <div class="container">
+            <div class="secao__cabecalho secao__cabecalho--pagina">
+                <span class="secao__etiqueta"><i class="fas fa-map-marker-alt"></i> Santa Cruz do Sul - RS</span>
+                <h1 class="secao__titulo secao__titulo--pagina">Empresas de Energia Solar em Santa Cruz do Sul</h1>
+                <p class="secao__descricao secao__descricao--pagina">
+                    Conheça as empresas e cooperativas que atuam na cidade, aprovadas pela nossa equipe.
+                </p>
+            </div>
+
+            <div class="empresas__busca-container">
+                <div class="empresas__busca">
+                    <i class="fas fa-search empresas__icone-busca"></i>
+                    <input type="text" id="busca-empresas" class="empresas__entrada-busca"
+                           placeholder="Buscar por nome ou bairro...">
+                </div>
+                <div class="empresas__info-local">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Santa Cruz do Sul - RS</span>
+                </div>
+            </div>
+
+            <div class="empresas__grade" id="grade-empresas"></div>
+
+            <div class="empresas__vazio" id="empresas-vazio" style="display: none;">
+                <i class="fas fa-building-circle-exclamation"></i>
+                <h3>Nenhuma empresa cadastrada ainda</h3>
+                <p>Se você é uma empresa do setor, cadastre-se clicando no botão abaixo.</p>
+            </div>
+
+            <div class="empresas__acao-cadastro">
+                <p>Sua empresa não está na lista?</p>
+                <a href="cadastro-empresa.html" class="botao botao--cadastro-empresa">
+                    <i class="fas fa-plus-circle"></i> Cadastre sua Empresa
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape__container">
+            <div class="rodape__esquerda">
+                <div class="rodape__sobre">
+                    <h3 class="rodape__titulo-sobre">Sobre Nós</h3>
+                    <p class="rodape__texto-sobre">A BrightEnergy é uma plataforma dedicada a democratizar o acesso à informação sobre energias renováveis em Santa Cruz do Sul.</p>
+                </div>
+            </div>
+            <div class="rodape__centro">
+                <h3 class="rodape__titulo-links">Links Rápidos</h3>
+                <ul class="rodape__links">
+                    <li><a href="index.html" class="rodape__link">Início</a></li>
+                    <li><a href="calculadora.html" class="rodape__link">Calculadora</a></li>
+                    <li><a href="empresas.html" class="rodape__link">Empresas</a></li>
+                    <li><a href="contato.html" class="rodape__link">Contato</a></li>
+                </ul>
+            </div>
+            <div class="rodape__direita">
+                <h3 class="rodape__titulo-contato">Contato</h3>
+                <div class="rodape__info-contato">
+                    <div class="rodape__contato-item">
+                        <i class="fas fa-envelope rodape__icone-contato"></i>
+                        <div>
+                            <span class="rodape__rotulo-contato">E-mail</span>
+                            <a href="mailto:contato@brightenergy.com.br" class="rodape__link-contato">contato@brightenergy.com.br</a>
+                        </div>
+                    </div>
+                    <div class="rodape__contato-item">
+                        <i class="fas fa-phone rodape__icone-contato"></i>
+                        <div>
+                            <span class="rodape__rotulo-contato">Telefone</span>
+    <a href="tel:+5551986601274" class="rodape__link-contato">(51) 98660-1274</a>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rodape__inferior">
+            <div class="container rodape__inferior-container">
+                <p class="rodape__copyright">&copy; 2026 BrightEnergy. Projeto ODS 7 - Santa Cruz do Sul</p>
+                <p class="rodape__desenvolvedor">Pedro Fagundes Alves</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/menu-mobile.js"></script>
+    <script src="js/empresas.js"></script>
+</body>
+
+</html>

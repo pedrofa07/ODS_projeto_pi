@@ -1,0 +1,209 @@
+/* ============================================
+   CONTATO
+   ============================================ */
+.contato-principal {
+    padding: 3rem 0 5rem;
+    min-height: calc(100vh - 200px);
+}
+
+.contato__conteudo {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contato__formulario {
+    background: var(--cor-fundo-claro);
+    border-radius: var(--borda-radius-xl);
+    padding: 2rem;
+    border: 1px solid var(--cor-borda);
+    box-shadow: var(--sombra-media);
+}
+
+.contato__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.contato__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.contato__rotulo {
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+    font-size: 0.9rem;
+}
+
+.contato__entrada {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--cor-borda);
+    border-radius: var(--borda-radius-padrao);
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    transition: var(--transicao-padrao);
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.contato__entrada:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.contato__selecao {
+    cursor: pointer;
+}
+
+.contato__textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contato__sucesso {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.contato__icone-sucesso {
+    font-size: 4rem;
+    color: var(--cor-sucesso);
+    margin-bottom: 1rem;
+}
+
+.contato__sucesso h3 {
+    font-size: 1.5rem;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 0.5rem;
+}
+
+.contato__sucesso p {
+    color: var(--cor-texto-claro);
+}
+
+/* Informações de contato */
+.contato__informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contato__cartao-info {
+    background: var(--cor-fundo-claro);
+    border-radius: var(--borda-radius-xl);
+    padding: 2rem;
+    border: 1px solid var(--cor-borda);
+    box-shadow: var(--sombra-media);
+}
+
+.contato__titulo-info {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 1.5rem;
+}
+
+.contato__info-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.contato__info-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.contato__icone-info {
+    width: 45px;
+    height: 45px;
+    border-radius: var(--borda-radius-padrao);
+    background: #dcfce7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-primaria);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.contato__rotulo-info {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--cor-texto-claro);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+.contato__valor-info {
+    display: block;
+    font-weight: 600;
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+}
+
+.contato__redes-sociais {
+    background: var(--cor-fundo-claro);
+    border-radius: var(--borda-radius-xl);
+    padding: 2rem;
+    border: 1px solid var(--cor-borda);
+    box-shadow: var(--sombra-media);
+}
+
+.contato__titulo-redes {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 1rem;
+}
+
+.contato__icones-redes {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.contato__rede-social {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--cor-fundo-cinza);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-texto);
+    text-decoration: none;
+    transition: var(--transicao-padrao);
+    font-size: 1.2rem;
+}
+
+.contato__rede-social:hover {
+    background: var(--cor-primaria);
+    color: white;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 1024px) {
+    .contato__conteudo {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+}
+/* BRIGHTENERGY UI 2026 */
+.contato-principal{padding:18px 0 70px;background:linear-gradient(180deg,#f8fbf9,#f3f7f5)}
+.contato__conteudo{max-width:1040px;gap:18px}
+.contato__formulario,.contato__cartao-info{border:1px solid var(--cor-borda);border-radius:20px;background:#fff;box-shadow:var(--sombra)}
+.contato__entrada{border:1px solid var(--cor-borda);border-radius:12px;background:#fbfdfc;min-height:48px}
+.contato__textarea{min-height:130px}
+.contato__entrada:focus{border-color:var(--verde-500);box-shadow:0 0 0 4px rgba(16,185,129,.11)}
+@media(max-width:800px){.contato__conteudo{grid-template-columns:1fr}.contato__informacoes{order:2}}
+@media(max-width:640px){.contato__formulario,.contato__cartao-info{padding:20px}.contato-principal{padding-bottom:50px}}

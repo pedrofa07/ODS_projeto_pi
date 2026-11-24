@@ -1,0 +1,84 @@
+.cadastro-principal {
+    padding: 3rem 0 5rem;
+    min-height: calc(100vh - 200px);
+}
+
+.cadastro__formulario-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--cor-fundo-claro);
+    border-radius: var(--borda-radius-xl);
+    padding: 2rem;
+    border: 1px solid var(--cor-borda);
+    box-shadow: var(--sombra-media);
+}
+
+.cadastro__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.cadastro__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.cadastro__rotulo {
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+    font-size: 0.9rem;
+}
+
+.cadastro__entrada {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--cor-borda);
+    border-radius: var(--borda-radius-padrao);
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    transition: var(--transicao-padrao);
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cadastro__entrada:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.cadastro__sucesso {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.cadastro__icone-sucesso {
+    font-size: 4rem;
+    color: var(--cor-sucesso);
+    margin-bottom: 1rem;
+}
+
+.cadastro__sucesso h3 {
+    font-size: 1.5rem;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 0.5rem;
+}
+
+.cadastro__sucesso p {
+    color: var(--cor-texto-claro);
+}
+
+@media (max-width: 640px) {
+    .cadastro__formulario-container {
+        padding: 1.5rem;
+    }
+}
+/* BRIGHTENERGY UI 2026 */
+.cadastro-principal{padding:18px 0 70px;background:linear-gradient(180deg,#f8fbf9,#f3f7f5)}
+.cadastro__formulario-container{max-width:720px;border:1px solid var(--cor-borda);border-radius:20px;background:#fff;box-shadow:var(--sombra);padding:28px}
+.cadastro__entrada{min-height:48px;border:1px solid var(--cor-borda);border-radius:12px;background:#fbfdfc}
+.cadastro__entrada:focus{border-color:var(--verde-500);box-shadow:0 0 0 4px rgba(16,185,129,.11)}
+@media(max-width:640px){.cadastro__formulario-container{padding:20px}.cadastro-principal{padding-bottom:50px}}
