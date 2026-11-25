@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/empresas.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -29,7 +30,7 @@
                     <li><a href="calculadora.html" class="navegacao__link">Calculadora</a></li>
                     <li><a href="empresas.html" class="navegacao__link">Empresas</a></li>
                     <li><a href="contato.html" class="navegacao__link">Contato</a></li>
-                     <li>
+                    <li id="menu-admin-item" style="display:none;">
                         <a href="admin.html" class="navegacao__link">Admin</a>
                     </li>
                 </ul>
@@ -51,7 +52,7 @@
                 <div class="empresas__busca">
                     <i class="fas fa-search empresas__icone-busca"></i>
                     <input type="text" id="busca-empresas" class="empresas__entrada-busca"
-                           placeholder="Buscar por nome ou bairro...">
+                        placeholder="Buscar por nome ou bairro...">
                 </div>
                 <div class="empresas__info-local">
                     <i class="fas fa-map-pin"></i>
@@ -81,7 +82,8 @@
             <div class="rodape__esquerda">
                 <div class="rodape__sobre">
                     <h3 class="rodape__titulo-sobre">Sobre Nós</h3>
-                    <p class="rodape__texto-sobre">A BrightEnergy é uma plataforma dedicada a democratizar o acesso à informação sobre energias renováveis em Santa Cruz do Sul.</p>
+                    <p class="rodape__texto-sobre">A BrightEnergy é uma plataforma dedicada a democratizar o acesso à
+                        informação sobre energias renováveis em Santa Cruz do Sul.</p>
                 </div>
             </div>
             <div class="rodape__centro">
@@ -100,14 +102,16 @@
                         <i class="fas fa-envelope rodape__icone-contato"></i>
                         <div>
                             <span class="rodape__rotulo-contato">E-mail</span>
-                            <a href="mailto:contato@brightenergy.com.br" class="rodape__link-contato">contato@brightenergy.com.br</a>
+                            <a href="mailto:contato@brightenergy.com.br"
+                                class="rodape__link-contato">contato@brightenergy.com.br</a>
                         </div>
                     </div>
                     <div class="rodape__contato-item">
                         <i class="fas fa-phone rodape__icone-contato"></i>
                         <div>
                             <span class="rodape__rotulo-contato">Telefone</span>
-    <a href="tel:+5551986601274" class="rodape__link-contato">(51) 98660-1274</a>                        </div>
+                            <a href="tel:+5551986601274" class="rodape__link-contato">(51) 98660-1274</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -125,6 +129,8 @@
     <script src="js/firebase-config.js"></script>
     <script src="js/menu-mobile.js"></script>
     <script src="js/empresas.js"></script>
+    <script src="js/admin-nav.js"></script>
+
 </body>
 
 </html>

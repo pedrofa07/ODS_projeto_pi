@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,11 @@
     <link rel="stylesheet" href="css/calculadora.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
     <header class="cabecalho">
         <nav class="navegacao">
@@ -27,7 +30,7 @@
                     <li><a href="calculadora.html" class="navegacao__link">Calculadora</a></li>
                     <li><a href="empresas.html" class="navegacao__link">Empresas</a></li>
                     <li><a href="contato.html" class="navegacao__link">Contato</a></li>
-                     <li>
+                    <li id="menu-admin-item" style="display:none;">
                         <a href="admin.html" class="navegacao__link">Admin</a>
                     </li>
                 </ul>
@@ -56,7 +59,8 @@
                                     <i class="fas fa-bolt calculadora__icone-campo"></i>
                                     Valor médio da conta de energia (R$)
                                 </label>
-                                <input type="number" id="valor-conta" class="calculadora__entrada" placeholder="Ex: 500" min="0" step="0.01" required>
+                                <input type="number" id="valor-conta" class="calculadora__entrada" placeholder="Ex: 500"
+                                    min="0" step="0.01" required>
                                 <span class="calculadora__ajuda">Insira o valor médio mensal da sua conta de luz</span>
                             </div>
                             <div class="calculadora__campo">
@@ -64,7 +68,8 @@
                                     <i class="fas fa-solar-panel calculadora__icone-campo"></i>
                                     Custo estimado do sistema (R$)
                                 </label>
-                                <input type="number" id="custo-sistema" class="calculadora__entrada" placeholder="Ex: 15000" min="0" step="0.01" required>
+                                <input type="number" id="custo-sistema" class="calculadora__entrada"
+                                    placeholder="Ex: 15000" min="0" step="0.01" required>
                                 <span class="calculadora__ajuda">Valor total do sistema incluindo instalação</span>
                             </div>
                             <div class="calculadora__campo">
@@ -130,7 +135,8 @@
                         <div class="resultado__analise" id="resultado-analise"></div>
 
                         <div class="resultado__acoes">
-                            <button id="btn-voltar-calculadora" class="botao botao--secundario botao--pequeno" style="background: #f1f5f9; color: #1e293b; border: 2px solid #94a3b8;">
+                            <button id="btn-voltar-calculadora" class="botao botao--secundario botao--pequeno"
+                                style="background: #f1f5f9; color: #1e293b; border: 2px solid #94a3b8;">
                                 <i class="fas fa-arrow-left"></i> Voltar para a calculadora
                             </button>
                             <button onclick="window.print()" class="botao botao--secundario botao--pequeno">
@@ -155,7 +161,8 @@
                         <div class="calculadora__explicacao-item">
                             <div class="calculadora__explicacao-icone"><i class="fas fa-bolt"></i></div>
                             <h3>1. Economia mensal</h3>
-                            <p>A economia mensal é calculada multiplicando o valor médio da sua conta pelo percentual de redução escolhido:</p>
+                            <p>A economia mensal é calculada multiplicando o valor médio da sua conta pelo percentual de
+                                redução escolhido:</p>
                             <p class="calculadora__formula">Economia = Conta × (% economia ÷ 100)</p>
                             <p class="calculadora__exemplo">Ex.: R$ 500 × 80% = <strong>R$ 400/mês</strong></p>
                         </div>
@@ -163,15 +170,18 @@
                         <div class="calculadora__explicacao-item">
                             <div class="calculadora__explicacao-icone"><i class="fas fa-clock"></i></div>
                             <h3>2. Tempo de retorno (Payback)</h3>
-                            <p>O payback indica em quantos meses o valor investido no sistema será recuperado pela economia gerada:</p>
+                            <p>O payback indica em quantos meses o valor investido no sistema será recuperado pela
+                                economia gerada:</p>
                             <p class="calculadora__formula">Payback = Custo do sistema ÷ Economia mensal</p>
-                            <p class="calculadora__exemplo">Ex.: R$ 15.000 ÷ R$ 400 = <strong>37,5 meses (~3,1 anos)</strong></p>
+                            <p class="calculadora__exemplo">Ex.: R$ 15.000 ÷ R$ 400 = <strong>37,5 meses (~3,1
+                                    anos)</strong></p>
                         </div>
 
                         <div class="calculadora__explicacao-item">
                             <div class="calculadora__explicacao-icone"><i class="fas fa-piggy-bank"></i></div>
                             <h3>3. Economia acumulada</h3>
-                            <p>Projetamos quanto você deixará de gastar em 5 e 10 anos, multiplicando a economia mensal pelo número de meses:</p>
+                            <p>Projetamos quanto você deixará de gastar em 5 e 10 anos, multiplicando a economia mensal
+                                pelo número de meses:</p>
                             <p class="calculadora__formula">Economia (5 anos) = Economia mensal × 60</p>
                             <p class="calculadora__exemplo">Ex.: R$ 400 × 60 = <strong>R$ 24.000</strong></p>
                         </div>
@@ -179,7 +189,10 @@
 
                     <div class="calculadora__explicacao-observacao">
                         <i class="fas fa-lightbulb"></i>
-                        <p><strong>Observação:</strong> Este cálculo é uma estimativa simplificada. Fatores como irradiação solar local, inclinação do telhado, sombreamento e reajustes tarifários podem alterar o resultado real. Consulte uma empresa especializada para um projeto personalizado.</p>
+                        <p><strong>Observação:</strong> Este cálculo é uma estimativa simplificada. Fatores como
+                            irradiação solar local, inclinação do telhado, sombreamento e reajustes tarifários podem
+                            alterar o resultado real. Consulte uma empresa especializada para um projeto personalizado.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -191,7 +204,8 @@
             <div class="rodape__esquerda">
                 <div class="rodape__sobre">
                     <h3 class="rodape__titulo-sobre">Sobre Nós</h3>
-                    <p class="rodape__texto-sobre">A BrightEnergy é uma plataforma dedicada a democratizar o acesso à informação sobre energias renováveis em Santa Cruz do Sul.</p>
+                    <p class="rodape__texto-sobre">A BrightEnergy é uma plataforma dedicada a democratizar o acesso à
+                        informação sobre energias renováveis em Santa Cruz do Sul.</p>
                 </div>
             </div>
             <div class="rodape__centro">
@@ -210,14 +224,16 @@
                         <i class="fas fa-envelope rodape__icone-contato"></i>
                         <div>
                             <span class="rodape__rotulo-contato">E-mail</span>
-                            <a href="mailto:contato@brightenergy.com.br" class="rodape__link-contato">contato@brightenergy.com.br</a>
+                            <a href="mailto:contato@brightenergy.com.br"
+                                class="rodape__link-contato">contato@brightenergy.com.br</a>
                         </div>
                     </div>
                     <div class="rodape__contato-item">
                         <i class="fas fa-phone rodape__icone-contato"></i>
                         <div>
                             <span class="rodape__rotulo-contato">Telefone</span>
-    <a href="tel:+5551986601274" class="rodape__link-contato">(51) 98660-1274</a>                        </div>
+                            <a href="tel:+5551986601274" class="rodape__link-contato">(51) 98660-1274</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -232,5 +248,8 @@
 
     <script src="js/menu-mobile.js"></script>
     <script src="js/calculadora.js"></script>
+    <script src="js/admin-nav.js"></script>
 </body>
+</body>
+
 </html>

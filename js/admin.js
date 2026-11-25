@@ -1,7 +1,44 @@
 // ============================================
 // PAINEL ADMINISTRATIVO
 // Login verificado diretamente no banco de dados
+// Sessão persistida no localStorage (7 dias)
 // ============================================
+
+// --------------------------------------------
+// PERSISTÊNCIA DE LOGIN (sessão salva)
+// --------------------------------------------
+const CHAVE_SESSAO       = 'brightenergy_admin_sessao';
+const DURACAO_SESSAO_MS  = 7 * 24 * 60 * 60 * 1000; // 7 dias
+// Para sessão "infinita" até clicar em Sair, troque a linha acima por:
+// const DURACAO_SESSAO_MS = null;
+
+function salvarSessao() {
+    const dados = {
+        criadaEm: Date.now(),
+        expiraEm: DURACAO_SESSAO_MS ? Date.now() + DURACAO_SESSAO_MS : null
+    };
+    localStorage.setItem(CHAVE_SESSAO, JSON.stringify(dados));
+}
+
+function sessaoValida() {
+    try {
+        const raw = localStorage.getItem(CHAVE_SESSAO);
+        if (!raw) return false;
+        const dados = JSON.parse(raw);
+        if (dados.expiraEm && Date.now() > dados.expiraEm) {
+            localStorage.removeItem(CHAVE_SESSAO);
+            return false;
+        }
+        return true;
+    } catch (erro) {
+        localStorage.removeItem(CHAVE_SESSAO);
+        return false;
+    }
+}
+
+function limparSessao() {
+    localStorage.removeItem(CHAVE_SESSAO);
+}
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -20,6 +57,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const abaEmpresas  = document.getElementById('tab-empresas');
 
     // --------------------------------------------
+    // AO CARREGAR: SE JÁ HÁ SESSÃO VÁLIDA, PULA O LOGIN
+    // --------------------------------------------
+    if (sessaoValida()) {
+        telaLogin.style.display  = 'none';
+        telaPainel.style.display = 'block';
+        carregarMensagens();
+        carregarEmpresas();
+    }
+
+    // --------------------------------------------
     // LOGIN
     // Busca as credenciais no banco e compara
     // --------------------------------------------
@@ -29,16 +76,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const loginDigitado = campoLogin.value.trim();
         const senhaDigitada = campoSenha.value;
 
-        // Esconde erro anterior
         textoErro.style.display = 'none';
 
-        // Mostra feedback de carregamento
         const botao = formulario.querySelector('button[type="submit"]');
         const textoOriginal = botao.innerHTML;
         botao.disabled = true;
         botao.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verificando...';
 
-        // Lê o nó "admin" uma única vez
         database.ref('admin').once('value')
             .then(function(snapshot) {
                 const credenciais = snapshot.val();
@@ -46,16 +90,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 botao.disabled = false;
                 botao.innerHTML = textoOriginal;
 
-                // Caso o nó "admin" não exista no banco
                 if (!credenciais) {
                     textoErro.textContent = 'Credenciais não configuradas no banco de dados.';
                     textoErro.style.display = 'block';
                     return;
                 }
 
-                // Compara o que foi digitado com o que está no banco
                 if (loginDigitado === credenciais.login && senhaDigitada === credenciais.senha) {
-                    // ✅ Login correto
+                    // ✅ Login correto — salva a sessão e abre o painel
+                    salvarSessao();
+
                     telaLogin.style.display  = 'none';
                     telaPainel.style.display = 'block';
 
@@ -65,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     carregarMensagens();
                     carregarEmpresas();
                 } else {
-                    // ❌ Login ou senha errados
                     textoErro.textContent = 'Login ou senha incorretos.';
                     textoErro.style.display = 'block';
                 }
@@ -85,6 +128,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // SAIR
     // --------------------------------------------
     document.getElementById('btn-logout').addEventListener('click', function() {
+        limparSessao();   // ← apaga a sessão salva
+
         telaPainel.style.display = 'none';
         telaLogin.style.display  = 'block';
 
@@ -127,7 +172,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = document.getElementById('lista-mensagens');
         container.innerHTML = '<p style="color:var(--cor-texto-claro);">Carregando...</p>';
 
-        database.ref('mensagens').on('value', function(snapshot) {
+        const referencia = database.ref('mensagens');
+        referencia.off('value');   // evita listeners empilhados
+        referencia.on('value', function(snapshot) {
             const dados = snapshot.val() || {};
             const lista = Object.keys(dados).map(function(id) {
                 return Object.assign({ id: id }, dados[id]);
@@ -138,7 +185,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Mais recentes primeiro
             lista.sort(function(a, b) {
                 return new Date(b.data) - new Date(a.data);
             });
@@ -170,7 +216,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             container.innerHTML = html;
 
-            // Botões de excluir
             container.querySelectorAll('.btn-excluir').forEach(function(botao) {
                 botao.addEventListener('click', function() {
                     const id = this.dataset.id;
@@ -195,7 +240,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = document.getElementById('lista-empresas-admin');
         container.innerHTML = '<p style="color:var(--cor-texto-claro);">Carregando...</p>';
 
-        database.ref('empresas').on('value', function(snapshot) {
+        const referencia = database.ref('empresas');
+        referencia.off('value');   // evita listeners empilhados
+        referencia.on('value', function(snapshot) {
             const dados = snapshot.val() || {};
             const lista = Object.keys(dados).map(function(id) {
                 return Object.assign({ id: id }, dados[id]);
@@ -206,7 +253,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Pendentes primeiro, aprovadas depois
             lista.sort(function(a, b) {
                 if (a.aprovado === b.aprovado) return 0;
                 return a.aprovado ? 1 : -1;
@@ -239,7 +285,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             container.innerHTML = html;
 
-            // Botão Aprovar
             container.querySelectorAll('.btn-aprovar').forEach(function(botao) {
                 botao.addEventListener('click', function() {
                     const id = this.dataset.id;
@@ -248,7 +293,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
 
-            // Botão Excluir
             container.querySelectorAll('.btn-excluir').forEach(function(botao) {
                 botao.addEventListener('click', function() {
                     const id = this.dataset.id;
@@ -259,7 +303,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
 
-            // Botão Editar
             container.querySelectorAll('.btn-editar').forEach(function(botao) {
                 botao.addEventListener('click', function() {
                     const id  = this.dataset.id;

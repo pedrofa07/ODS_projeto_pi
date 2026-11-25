@@ -17,16 +17,25 @@
     <!-- ============================================
          CABEÇALHO
          ============================================ -->
-    <header class="cabecalho-admin">
-        <div class="container">
-            <div class="admin-header">
-                <a href="index.html" class="navegacao__logo" style="color:white;">
+  <header class="cabecalho">
+        <nav class="navegacao">
+            <div class="container navegacao__container">
+                <a href="index.html" class="navegacao__logo">
                     <i class="fas fa-sun navegacao__icone-logo"></i>
                     <span class="navegacao__texto-logo">BrightEnergy</span>
                 </a>
-                <span style="color:rgba(255,255,255,0.7);">Painel Administrativo</span>
+                <button class="navegacao__menu-mobile" id="botao-menu-mobile" aria-label="Abrir menu">
+                    <span class="navegacao__hamburguer"></span>
+                </button>
+                <ul class="navegacao__menu" id="menu-principal">
+                    <li><a href="index.html" class="navegacao__link">Início</a></li>
+                    <li><a href="calculadora.html" class="navegacao__link">Calculadora</a></li>
+                    <li><a href="empresas.html" class="navegacao__link">Empresas</a></li>
+                    <li><a href="contato.html" class="navegacao__link">Contato</a></li>
+                     <li><a href="contato.html" class="navegacao__link">Admin</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
     </header>
 
     <main class="admin-principal">
